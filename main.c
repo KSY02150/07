@@ -1,18 +1,15 @@
-//매개변수는 일종의 지역변수이다//
+//전역변수 선언//
 #include <stdio.h>
-
-int inc(int counter); //함수선언
-
+int counter;
+//별도의 초기 할당이 없는 경우 0으로 초기화
+void set_counter()
+{
+    counter=20;
+}
 int main(void)
 {
-    int i =10;
-    printf("before function i=%d\n", i);
-    i = inc(i); //이렇게하면 i가 수정됨
-    printf("after function i=%d\n", i);
+    printf("counter=%d\n", counter);
+    set_counter();
+    printf("counter=%d\n", counter);
     return 0;
-}
-int inc(int counter)
-{
-    counter++;
-    return counter;
 }
