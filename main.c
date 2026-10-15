@@ -1,15 +1,20 @@
-//전역변수 선언//
+//전역변수//
 #include <stdio.h>
-int counter;
-//별도의 초기 할당이 없는 경우 0으로 초기화
-void set_counter()
-{
-    counter=20;
-}
+void f(void); //함수선언
+//수정버전(지역변수로 하기)
 int main(void)
 {
-    printf("counter=%d\n", counter);
-    set_counter();
-    printf("counter=%d\n", counter);
+    int i;
+    for(i=0;i<5;i++)
+    {
+        f(); 
+    }
     return 0;
 }
+
+void f(void)
+{
+    int i;
+    for(i=0;i<10;i++)
+        printf("#");
+} 
