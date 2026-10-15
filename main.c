@@ -1,15 +1,15 @@
-//전역변수와 코드컴파일오류 수정//
+//지역 변수 생존기간//
 #include <stdio.h>
 
-int main(void)  //수정 코드
+int main(void)
 {
-    int flag=1;
+    int i;
 
-    while(flag !=0)
+    for (i=0;i<5;i++)
     {
-        int y;   //y를 while문 안에서만 사용
-        y = 3;
-        flag = 0;
+        int temp =1; //temp가 항상 1로 초기화됨
+        printf("temp= %d\n", temp);
+        temp++;
     }
     return 0;
-}  
+}
