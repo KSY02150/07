@@ -1,4 +1,4 @@
-//실습 6-1연결//
+//실습 6-2연결//
 extern int all_files;
 void sub(void)
 {
